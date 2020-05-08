@@ -4,4 +4,4 @@ What factors predict political support in the 2016 presidential election?  I use
 # List of Files
 **Mod_2_Final.ipynb** - Jupyter Notebook for data cleaning and modeling.
 
-**Mod_2_Final.ipynb** - Jupyter Notebook for data cleaning and modeling without using root predictor variables.
+**Mod_2_Final_No_Root.ipynb** - Jupyter Notebook for data cleaning and modeling without using root predictor variables.
