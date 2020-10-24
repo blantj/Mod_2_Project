@@ -9,9 +9,17 @@ I obtained county level data in excel format for 33 demographic features from th
 The first issues I faced while scrubbing my data was the presense of two county level equivalents in Virginia, counties and independent cities, which sometimes had duplicate names.  I identified duplicate county names and manually updated those names to specify whether they were counties or independent cities.  I replaced missing feature values with the mean for those features.  I also applied a standard scaler to my features, in order to make the relative importance of coefficients in my linear regression model comparable.  Finally, I created interactions to have more features to include in my model.
 
 ## Explore Data
-In the process of performing EDA, I discovered that many features had non-linear relationships with proportion of support for Donald Trump.  I used log transformations to update features with non-linear relationships to have linear relationships with the dependent variable.  I also created a correlation matrix of my independent variables and removed heavily correlated ones.
+<a href="url"><img src="Images/Vote_Proportion_Describe.png" align="center" height="150" width="300" ></a>
+
+Descriptive statistics for the Donald Trump Vote Proportion dependent variable
+
+On average, 52.7% of a counties' voters voted for Donald Trump with a standard deviation of .149.  In the process of plotting my feature relationships with the dependent variable, I discovered that many features had non-linear relationships with proportion of support for Donald Trump.  I used log transformations to update features with non-linear relationships to have linear relationships with the dependent variable.  I also created a correlation matrix of my independent variables and removed heavily correlated ones.
 
 ## Model Data
+<a href="url"><img src="Images/Lasso_Results.png" align="center" height="250" width="250" ></a>
+
+Bar graph of Lasso feature coefficients
+
 I used RMSE as my principle evaluation metric in order to measure the difference between my model predictions and the actual values, while disproportionately punishing large prediction misses. I used an 80/20 Train Test Split to validate my model.  Using Lasso feature selection, my testing RMSE was .092.  The most important features in increasing support for Donald Trump were Caucasian Population proportion, Veteran Population proportion and Mining Jobs per Capita with coefficients of .05, .03 and .02 respectively.  The most influential features in decreasing support for Donald Trump were population proportion with a Bachelors Degree, Hispanic Population proportion and Population Density with coefficients of -.04, -.02 and -.01 respectively.
 
 ## Next steps
